@@ -19,20 +19,19 @@ main {
   width: 80%;
   margin: 2rem auto;
   padding: 2rem;
-  background: linear-gradient(145deg, #ffffff, #f0f4f8); /* soft gradient */
-  border-radius: 15px; /* slightly more rounded */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0,0,0,0.05); /* layered shadow for depth */
+  background: linear-gradient(145deg, #ffffff, #f0f4f8); 
+  border-radius: 15px; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0,0,0,0.05); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* subtle hover effect */
 main:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15), 0 6px 10px rgba(0,0,0,0.07);
 }
 .arabic-main {
-    direction: rtl;     /* text flows right-to-left */
-    text-align: right;  /* aligns text to the right inside the box */
+    direction: rtl;     
+    text-align: right;  
 }
 .arabic-main h2,
 .arabic-main h3,
@@ -90,7 +89,6 @@ background: #155bb5;
   padding: 15px 0;
 }
 
-/* Menu layout */
 nav ul {
   list-style: none;
   display: flex;
@@ -100,7 +98,6 @@ nav ul {
   padding: 0;
 }
 
-/* Menu links */
 nav a {
   color: #fff;
   text-decoration: none;
@@ -187,11 +184,11 @@ p {
 
 section figure {
   margin: 1rem 0;
-  text-align: center;      /* ensures image and caption stay left-aligned */
+  text-align: center;      
 }
 
 section figure img {
-  width: 100%;           /* scales image to container width */
+  width: 100%;           
   max-width: 600px;
   border-radius: 10px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.2);
@@ -204,38 +201,37 @@ section figure figcaption {
   margin-top: 0.5rem;
 }
 .milestones ul {
-  margin-left: 2rem;       /* adds left margin to indent list */
+  margin-left: 2rem;      
   line-height: 1.8;
   text-align: left;
-  display: block;          /* default, just to override inline-block if needed */
-  padding-left: 0;         /* optional: remove default ul padding if necessary */
+  display: block;         
+  
 }
 
 
 
 
 .ordered-list ol {
-  margin-left: 1rem;   /* space for numbers */
+  margin-left: 1rem;  
   padding-left: 0;
 }
 
 .ordered-list ol li::marker {
-  color: #1a73e8;      /* number color */
+  color: #1a73e8;     
   font-weight: bold;
 }
 .unordered-list ul {
-  margin-left: 1rem;   /* space for bullets */
+  margin-left: 1rem;   
   padding-left: 0;
-    line-height: 1.8;          /* more space between lines */
+    line-height: 1.8;          
 
 }
 
 .unordered-list ul li::marker {
-  color: #1a73e8;      /* bullet color */
+  color: #1a73e8;      
   font-weight: bold;
 }
 
-/* === HORIZONTAL RULE === */
 hr {
     width: 80%;
     border-top: 2px solid #1a73e8;
@@ -246,8 +242,8 @@ hr {
 
 
 section table {
-  width: 90%;             /* table width */
-  margin: 20px auto;      /* center table */
+  width: 90%;            
+  margin: 20px auto;     
   border-collapse: collapse;
   font-family: sans-serif;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -268,16 +264,16 @@ section th, section td {
 }
 
 section th {
-  background-color: #1a73e8;  /* theme color */
+  background-color: #1a73e8;  
   color: #fff;
 }
 
 section tr:nth-child(even) {
-  background-color: #f9f9f9;   /* striped rows */
+  background-color: #f9f9f9;   
 }
 
 section tr:hover {
-  background-color: #e1f0ff;   /* hover effect */
+  background-color: #e1f0ff;  
 }
 
 section a {
@@ -292,7 +288,7 @@ section a:hover {
 
 .references-list {
 
-  padding-left: 2rem;       /* indent numbers */
+  padding-left: 2rem;      
   margin: 2rem auto;
   max-width: 900px;
   line-height: 1.6;
@@ -311,7 +307,7 @@ section a:hover {
     max-width: 900px;
     margin: 2rem auto;
     padding: 1rem;
-    background-color: #f1f5f9;  /* soft background to separate section */
+    background-color: #f1f5f9;  
     border-left: 5px solid #1a73e8;
     border-radius: 5px;
 }
@@ -372,18 +368,17 @@ section a:hover {
 }
 
 .collapsible-input:checked ~ .collapsible-content {
-  max-height: 2000px; /* large enough to fit any paragraph */
+  max-height: 2000px; 
   padding: 1.2rem;
 }
 .collapsible-content ul {
-  margin-left: 1.5rem;   /* space before bullets */
-  padding-left: 1rem;    /* extra inner padding */
-  list-style-type: disc; /* default round bullets */
+  margin-left: 1.5rem; 
+  padding-left: 1rem;    
 }
 
 .collapsible-content li {
-  margin-bottom: 0.5rem; /* space between list items */
-  line-height: 1.6;      /* better readability */
+  margin-bottom: 0.5rem; 
+  line-height: 1.6;    
 }
 
 
@@ -455,5 +450,5 @@ footer a:hover {
     to { opacity: 1; transform: translateY(0);}
 }
 .references-list li {
-  scroll-margin-block: 50vh; /* height of your fixed header */
+  scroll-margin-block: 50vh;
 }
