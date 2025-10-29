@@ -19,19 +19,20 @@ main {
   width: 80%;
   margin: 2rem auto;
   padding: 2rem;
-  background: linear-gradient(145deg, #ffffff, #f0f4f8); 
-  border-radius: 15px; 
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0,0,0,0.05); 
+  background: linear-gradient(145deg, #ffffff, #f0f4f8); /* soft gradient */
+  border-radius: 15px; /* slightly more rounded */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0,0,0,0.05); /* layered shadow for depth */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* subtle hover effect */
 main:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15), 0 6px 10px rgba(0,0,0,0.07);
 }
 .arabic-main {
-    direction: rtl;     
-    text-align: right;  
+    direction: rtl;     /* text flows right-to-left */
+    text-align: right;  /* aligns text to the right inside the box */
 }
 .arabic-main h2,
 .arabic-main h3,
@@ -74,7 +75,9 @@ main:hover {
   font-weight: bold;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   transition: all 0.3s ease;
+  z-index: 1100;
 }
+
 .welcome-btn:hover {
 background: #155bb5;
     transform: scale(1.05);
@@ -89,6 +92,7 @@ background: #155bb5;
   padding: 15px 0;
 }
 
+/* Menu layout */
 nav ul {
   list-style: none;
   display: flex;
@@ -98,6 +102,7 @@ nav ul {
   padding: 0;
 }
 
+/* Menu links */
 nav a {
   color: #fff;
   text-decoration: none;
@@ -184,11 +189,11 @@ p {
 
 section figure {
   margin: 1rem 0;
-  text-align: center;      
+  text-align: center;      /* ensures image and caption stay left-aligned */
 }
 
 section figure img {
-  width: 100%;           
+  width: 100%;           /* scales image to container width */
   max-width: 600px;
   border-radius: 10px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.2);
@@ -201,37 +206,38 @@ section figure figcaption {
   margin-top: 0.5rem;
 }
 .milestones ul {
-  margin-left: 2rem;      
+  margin-left: 2rem;       /* adds left margin to indent list */
   line-height: 1.8;
   text-align: left;
-  display: block;         
-  
+  display: block;          /* default, just to override inline-block if needed */
+  padding-left: 0;         /* optional: remove default ul padding if necessary */
 }
 
 
 
 
 .ordered-list ol {
-  margin-left: 1rem;  
+  margin-left: 1rem;   /* space for numbers */
   padding-left: 0;
 }
 
 .ordered-list ol li::marker {
-  color: #1a73e8;     
+  color: #1a73e8;      /* number color */
   font-weight: bold;
 }
 .unordered-list ul {
-  margin-left: 1rem;   
+  margin-left: 1rem;   /* space for bullets */
   padding-left: 0;
-    line-height: 1.8;          
+    line-height: 1.8;          /* more space between lines */
 
 }
 
 .unordered-list ul li::marker {
-  color: #1a73e8;      
+  color: #1a73e8;      /* bullet color */
   font-weight: bold;
 }
 
+/* === HORIZONTAL RULE === */
 hr {
     width: 80%;
     border-top: 2px solid #1a73e8;
@@ -242,8 +248,8 @@ hr {
 
 
 section table {
-  width: 90%;            
-  margin: 20px auto;     
+  width: 90%;             /* table width */
+  margin: 20px auto;      /* center table */
   border-collapse: collapse;
   font-family: sans-serif;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -264,16 +270,16 @@ section th, section td {
 }
 
 section th {
-  background-color: #1a73e8;  
+  background-color: #1a73e8;  /* theme color */
   color: #fff;
 }
 
 section tr:nth-child(even) {
-  background-color: #f9f9f9;   
+  background-color: #f9f9f9;   /* striped rows */
 }
 
 section tr:hover {
-  background-color: #e1f0ff;  
+  background-color: #e1f0ff;   /* hover effect */
 }
 
 section a {
@@ -288,7 +294,7 @@ section a:hover {
 
 .references-list {
 
-  padding-left: 2rem;      
+  padding-left: 2rem;       /* indent numbers */
   margin: 2rem auto;
   max-width: 900px;
   line-height: 1.6;
@@ -307,7 +313,7 @@ section a:hover {
     max-width: 900px;
     margin: 2rem auto;
     padding: 1rem;
-    background-color: #f1f5f9;  
+    background-color: #f1f5f9;  /* soft background to separate section */
     border-left: 5px solid #1a73e8;
     border-radius: 5px;
 }
@@ -368,17 +374,18 @@ section a:hover {
 }
 
 .collapsible-input:checked ~ .collapsible-content {
-  max-height: 2000px; 
+  max-height: 2000px; /* large enough to fit any paragraph */
   padding: 1.2rem;
 }
 .collapsible-content ul {
-  margin-left: 1.5rem; 
-  padding-left: 1rem;    
+  margin-left: 1.5rem;   /* space before bullets */
+  padding-left: 1rem;    /* extra inner padding */
+  list-style-type: disc; /* default round bullets */
 }
 
 .collapsible-content li {
-  margin-bottom: 0.5rem; 
-  line-height: 1.6;    
+  margin-bottom: 0.5rem; /* space between list items */
+  line-height: 1.6;      /* better readability */
 }
 
 
@@ -445,10 +452,230 @@ footer a:hover {
     animation: fadeIn 1.5s ease-in-out;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+
+body.cv-page {
+  margin-top: 20px;
+
+  background: white;
+  display: block;
+  justify-content: initial;
+  align-items: initial;
+  flex-direction: initial;
+  min-height: 100vh;
+  padding-top: 0; 
+}
+
+.cv-main {
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.cv-container * {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cv-container {
+  color: #333;
+  line-height: 1.4;
+  font-size: 14px;
+  max-width: 8.5in;
+  margin: 0 auto;
+  padding: 0.5in;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: white;
+}
+
+/* Header styles */
+.cv-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #2c3e50;
+}
+
+.cv-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.cv-title {
+  font-size: 18px;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.cv-contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 14px;
+}
+
+/* Section styles */
+.cv-section {
+  margin-bottom: 18px;
+}
+
+.cv-section-title {
+  font-size: 16px;
+  font-weight: 1000;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+/* Education section */
+.cv-education-item, .cv-project-item {
+  margin-bottom: 12px;
+}
+
+.cv-education-header, .cv-project-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.cv-education-details, .cv-project-details {
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+/* Skills section */
+.cv-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.cv-skill-category {
+  flex: 1;
+  min-width: 120px;
+}
+
+.cv-skill-list {
+  list-style-type: none;
+}
+
+.cv-skill-list li {
+  margin-bottom: 4px;
+}
+
+/* Print styles */
+@media print {
+  body {
+      margin: 0;
+      padding: 0;
+  }
+  
+  .cv-container {
+      box-shadow: none;
+      padding: 0.4in;
+  }
+  
+  .cv-no-break {
+      page-break-inside: avoid;
+  }
+}
+
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px);}
     to { opacity: 1; transform: translateY(0);}
 }
 .references-list li {
-  scroll-margin-block: 50vh;
+  scroll-margin-block: 50vh; /* height of your fixed header */
+}
+body.cv-page .cv-main {
+  transition: none; /* disable smooth transform */
+}
+
+body.cv-page .cv-main:hover {
+  transform: none; /* prevent translateY */
+  box-shadow: none; /* prevent shadow change */
+}
+
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #407cca;
+  min-width: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-direction: column;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  z-index: 1000;
+
+  /* Override inherited flex styles */
+  display: none;
+  flex-direction: column !important;
+  gap: 0 !important;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+  animation: slideDown 0.3s ease forwards;
+}
+
+/* Dropdown items */
+.dropdown-content li {
+  margin: 0;
+}
+
+/* Dropdown links */
+.dropdown-content li a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.dropdown-content li a:hover {
+  background: #155bb5;
+}
+
+/* Slide down animation */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
