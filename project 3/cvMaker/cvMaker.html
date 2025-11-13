@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV Maker</title>
+<link rel="stylesheet" href="cvmaker.css">
+</head>
+<body class="cv-page">
+
+<header>
+  <nav>
+    <ul class="menu">
+      <li><a href="../home.html">Home</a></li>
+      
+      <li class="dropdown">
+        <a href="#">Articles</a>
+        <ul class="dropdown-content">
+          <li><a href="../hist.html">History of the Web</a></li>
+          <li><a href="../websecurity.html">Security of the Web</a></li>
+          <li><a href="../mobilefirst.html">Mobile-First Design</a></li>
+          <li><a href="../statistics.html">Statistics</a></li>
+          <li><a href="../ar/arabic-article.html">Machine Learning (Ar)</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../cv.html">My CV</a></li>
+      <li><a href="cvMaker.html">CV Maker</a></li>
+      <li><a href="../schedule/schedule.html">My Schedule</a></li>
+      <li><a href="../events.html">JS Events</a></li>
+      <li><a href="../related.html">Related Topics</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <a href="../home.html" class="welcome-btn">Home</a>
+
+
+<div class="container">
+    <h1>CV Generator</h1>
+
+    <form id="cvForm">
+        <label>Full Name: <span class="required">*</span></label>
+        <input type="text" id="name" placeholder="John Doe" required>
+
+        <label>Title / Profession:</label>
+        <input type="text" id="title" placeholder="Computer Engineering Student">
+
+        <label>Email: <span class="required">*</span></label>
+        <input type="email" id="email" placeholder="example@mail.com" required>
+
+        <label>Phone: <span class="required">*</span></label>
+        <input type="text" id="phone" placeholder="+1234567890" required>
+
+        <label>Education (separate entries with semicolon):</label>
+        <textarea id="education" placeholder="University - Year - Details"></textarea>
+
+        <label>Projects & Competitions (separate entries with semicolon):</label>
+        <textarea id="projects" placeholder="Project Name - Details"></textarea>
+
+        <label>Technical Skills (comma separated):</label>
+        <input type="text" id="techSkills" placeholder="Java, HTML, CSS">
+
+        <label>Tools (comma separated):</label>
+        <input type="text" id="tools" placeholder="VS Code, GitHub">
+
+        <label>Languages (comma separated):</label>
+        <input type="text" id="languages" placeholder="English, French">
+
+        <label>Soft Skills (comma separated):</label>
+        <input type="text" id="softSkills" placeholder="Leadership, Teamwork">
+
+        <label>Extra-Curricular (separate entries with semicolon):</label>
+        <textarea id="extra" placeholder="Activity - Details"></textarea>
+
+        <button type="submit">Generate CV</button>
+    </form>
+
+    <div id="cvPreview" class="cv-main">
+        <a id="downloadBtn" class="download-btn" download>Download CV (PDF)</a>
+        <div class="cv-container" id="cvContent"></div>
+        <div class="buttons">
+            <button id="printBtn">Print / Save as PDF</button>
+            <button id="editBtn">Edit</button>
+        </div>
+    </div>
+</div>
+
+<script src="cvMaker.js"></script>
+</body>
+</html>
