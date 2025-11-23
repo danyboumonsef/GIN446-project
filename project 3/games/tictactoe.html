@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tictactoe</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    
+<header>
+  <nav>
+    <ul class="menu">
+      <li><a href="../home.html">Home</a></li>
+      
+      <li class="dropdown">
+        <a href="#">Articles</a>
+        <ul class="dropdown-content">
+          <li><a href="../hist.html">History of the Web</a></li>
+          <li><a href="../websecurity.html">Security of the Web</a></li>
+          <li><a href="../mobilefirst.html">Mobile-First Design</a></li>
+          <li><a href="../statistics.html">Statistics</a></li>
+          <li><a href="../ar/arabic-article.html">Machine Learning (Ar)</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../cv.html">My CV</a></li>
+      <li><a href="../cvMaker/cvMaker.html">CV Maker</a></li>
+      <li><a href="../schedule/schedule.html">My Schedule</a></li>
+      <li><a href="../events.html">JS Events</a></li>
+      <li><a href="tictactoe.html">Tic Tac Toe</a></li>
+      <li><a href="../related.html">Related Topics</a></li>
+    </ul>
+  </nav>
+
+  
+</header>
+
+ <h1>Tic-Tac-Toe Game</h1>
+
+
+
+ <a href="#tutorial-modal" class="howto-btn">How to Play</a>
+
+<!-- Tutorial Modal -->
+<div id="tutorial-modal" class="tutorial-modal">
+  <div class="tutorial-content">
+    <a href="#" class="close-tutorial">&times;</a>
+
+    <h2>How to Play</h2>
+
+    <!-- GIF -->
+    <img src="../Tic-tac-toe.gif" class="tutorial-gif" alt="Tutorial GIF">
+
+    <p>
+      Click a cell to place your mark. X starts first, players alternate turns,
+      and the first to line up 3 in a row wins.
+    </p>
+  </div>
+</div>
+
+   
+
+    <p id="current-player" class="current-player">Player: <span id="player-mark">X</span></p>
+    <button id="new-game-btn" class="new-game-btn">New Game</button>
+
+
+<p id="win-message" class="win-message"></p>
+
+
+
+    <div id="grid">
+        <div class="row">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>  
+        <div class="row">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>      
+        <div class="row">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>  
+    </div>
+
+
+
+<div class="scoreboard">
+        <div class="score-box">
+            <span class="score-label">X Wins</span>
+            <span id="score-x" class="score-value">0</span>
+        </div>
+
+        <div class="score-box">
+            <span class="score-label">O Wins</span>
+            <span id="score-o" class="score-value">0</span>
+        </div>
+
+        <div class="score-box">
+            <span class="score-label">Draws</span>
+            <span id="score-draw" class="score-value">0</span>
+        </div>
+    </div>
+
+
+    <script src="../js/tictactoe.js"></script>
+
+</body>
+</html>

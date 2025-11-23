@@ -764,3 +764,394 @@ body.cv-page .cv-main:hover {
 
 
 
+/* Tic Tac Toe Container */
+#grid {
+  max-width: 350px;
+  margin: 0.8rem auto;
+  padding: 12px;
+  background: #056acf;        /* Dark background to outline the grid */
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Rows */
+.row {
+  display: flex;
+  gap: 6px;
+}
+
+/* Cells */
+.cell {
+  flex: 1;
+  aspect-ratio: 1;
+  min-width: 100px;
+  min-height: 100px;
+
+  background: #fff;
+  border-radius: 6px;
+  border: 3px solid #555;   /* <<< THIS makes squares visible */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.2rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+
+/* Hover effect */
+.cell:hover:not(.taken) {
+  background-color: #eef1f5;
+  transform: scale(1.04);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* Focus for keyboard users */
+.cell:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+/* X and O styles */
+.cell.x {
+  color: #2563eb;
+  background: #dbeafe;
+}
+
+.cell.o {
+  color: #dc2626;
+  background: #fee2e2;
+}
+
+/* Cell cannot be clicked */
+.cell.taken {
+  cursor: not-allowed;
+}
+
+/* Winning highlight */
+.cell.winning {
+  background: #d1fae5 !important;
+  animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  #grid {
+    max-width: 280px;
+  }
+
+  .cell {
+    min-width: 70px;
+    min-height: 70px;
+    font-size: 1.9rem;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .cell,
+  .cell.winning {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .cell {
+    border: 2px solid #000;
+  }
+  .cell.x {
+    color: #0000cc;
+    background: #fff;
+    border: 3px solid #0000cc;
+  }
+  .cell.o {
+    color: #cc0000;
+    background: #fff;
+    border: 3px solid #cc0000;
+  }
+}
+
+
+
+
+/* ---------------- HOW TO PLAY BUTTON ---------------- */
+
+.howto-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  background: #2563eb;
+  color: #fff;
+  padding: 0.45rem 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: 0.25s ease;
+  z-index: 20;
+}
+
+.howto-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+
+/* ---------------- MODAL ---------------- */
+
+.tutorial-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+/* Show modal using CSS-only */
+.tutorial-modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+.howto-btn{
+  position: fixed;
+  top: 4rem;
+  right: 1rem;
+  background: #407cca;
+  color: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  z-index: 1100;
+}
+
+
+
+
+/* Modal box */
+.tutorial-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  animation: popIn 0.25s ease;
+  position: relative;
+}
+
+/* Close button */
+.close-tutorial {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #666;
+  font-weight: bold;
+}
+
+.close-tutorial:hover {
+  color: #000;
+}
+
+/* GIF */
+.tutorial-gif {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+  border-radius: 8px;
+}
+
+
+
+/* Modal pop animation */
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+
+/* ================= CURRENT PLAYER ================= */
+
+.current-player {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  margin: 0.3rem auto 0.4rem;  
+
+  background: linear-gradient(90deg, #dbeafe, #e0f2fe);
+  padding: 0.35rem 0.7rem;    
+
+  border-left: 4px solid #2563eb;
+  border-radius: 6px;
+
+  width: fit-content;
+
+  box-shadow: 0 1px 3px rgba(0, 50, 200, 0.15); /* ↓ softer shadow */
+}
+
+#player-mark {
+  color: #2563eb;
+  font-size: 1.35rem;
+}
+
+
+/* ================= NEW GAME BUTTON ================= */
+
+.new-game-btn {
+  display: block;
+  margin: 0.7rem auto 1.3rem;
+
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+
+  padding: 0.7rem 1.6rem;
+  border: none;
+  border-radius: 50px;
+
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+.new-game-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 15px rgba(37, 99, 235, 0.35);
+}
+
+.new-game-btn:active {
+  transform: translateY(0);
+}
+
+
+/* ================= SCOREBOARD ================= */
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.3rem 0 2rem;
+}
+
+/* Each score capsule */
+.score-box {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  width: 110px;
+  text-align: center;
+
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+
+  transition: 0.25s ease;
+}
+
+/* Capsule hover effect */
+.score-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+/* Labels */
+.score-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+/* Score values */
+.score-value {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+/* Special colors for X / O / Draws */
+#score-x {
+  color: #2563eb;
+}
+
+#score-o {
+  color: #dc2626;
+}
+
+#score-draw {
+  color: #c27803;
+}
+
+
+
+.win-message {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0.4rem 0 0.6rem;
+  color: #2563eb;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.win-message.show {
+  opacity: 1;
+  animation: popIn 0.5s ease;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.6); opacity: 0; }
+  60% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+
+.confetti {
+  position: fixed;
+  top: -10px;
+  width: 8px;
+  height: 14px;
+  opacity: 0.9;
+  border-radius: 3px;
+
+  animation-name: fall;
+  animation-timing-function: linear;
+}
+
+@keyframes fall {
+  from { transform: translateY(0) rotate(0deg); }
+  to   { transform: translateY(120vh) rotate(360deg); }
+}
