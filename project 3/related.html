@@ -262,18 +262,35 @@ comment*/ </code></pre>
         <h2>💾 Local Storage </h2>
       </label>
       <div class="collapsible-content">
- <p>Local storage is a built-in feature of web browsers that lets websites store key-value data in a user's browser, making the data persist even after the browser is closed. Unlike cookies, this data isn't sent to the server with every request and usually has a much higher storage limit (about 5–10MB per domain). It's mainly used for things like saving user preferences, caching data for offline access, or remembering state between visits on the same browser.</p>
- <p>Common types of data you can save include:</p>
-<ul>
-  <li>User preferences (e.g., theme, language)</li>
-  <li>Usernames or display names</li>
-  <li>Application settings or UI state</li>
-  <li>Recent search history or form inputs</li>
-  <li>Authentication tokens (not for sensitive data)</li>
-  <li>Small JSON objects or arrays (stringified as JSON)</li>
-  <li>Counters or scores</li>
-  <li>Offline cache for small app data (e.g., last viewed page)</li>
-</ul>
+ <p>
+    Local storage is a feature built into web browsers that lets websites save data
+    inside the user's browser. The saved data stays even if the browser is closed
+    or the page is refreshed. It is mainly used to remember things like user
+    preferences, app settings, or small pieces of data.
+  </p>
+
+  <p>
+    It is different from a <strong>database</strong> because a database stores data
+    on a server and can be shared between many users, while local storage is saved
+    only on the user's own device. It is also different from <strong>cookies</strong>
+    because cookies are sent to the server with every request, but local storage
+    data stays only in the browser.
+  </p>
+
+  <h3>Using Local Storage in JavaScript</h3>
+  <P>
+localStorage.setItem("username", "Dany");<br>
+let name = localStorage.getItem("username");<br>
+localStorage.removeItem("username");<br>
+<P>
+
+  <h3>Common Uses</h3>
+  <ul>
+    <li>Saving theme (dark or light mode)</li>
+    <li>Saving language choice</li>
+    <li>Storing usernames or display names</li>
+    <li>Saving small user settings and preferences</li>
+  </ul>
 
 </div>
  </section>
