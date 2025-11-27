@@ -16,6 +16,7 @@ const winMessage = document.getElementById("win-message");
 // Sounds
 const winSound = new Audio("../win.mp3");
 const drawSound = new Audio("../draw.mp3");
+const clickSound = new Audio("../click.mp3");
 
 // Game state
 let board = ["", "", "", "", "", "", "", "", ""];
@@ -59,6 +60,9 @@ function handleClick(e) {
 
   if (board[index] !== "" || !active) return;
 
+  clickSound.currentTime = 0;
+  clickSound.play();
+
   board[index] = currentPlayer;
   cell.textContent = currentPlayer;
   cell.classList.add(currentPlayer.toLowerCase());
@@ -76,6 +80,7 @@ function handleClick(e) {
   currentPlayer = currentPlayer === "X" ? "O" : "X";
   playerText.textContent = currentPlayer;
 }
+
 
 function checkWin(player) {
   return wins.find(combo =>
@@ -125,10 +130,6 @@ function endDraw() {
 newGameBtn.addEventListener("click", startGame);
 
 
-// ===========================
-//   CONFETTI FUNCTION 🎉
-//   Lightweight, no library
-// ===========================
 
 function launchConfetti() {
   const confettiCount = 120;

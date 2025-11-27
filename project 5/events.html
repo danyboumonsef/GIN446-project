@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript Event Explorer</title>
+  <link rel="stylesheet" href="styles.css?v=3.1">
+</head>
+
+<body>
+  
+<header>
+  <nav>
+    <ul class="menu">
+      <li><a href="home.html">Home</a></li>
+      
+      <li class="dropdown">
+        <a href="#">Articles</a>
+        <ul class="dropdown-content">
+          <li><a href="hist.html">History of the Web</a></li>
+          <li><a href="websecurity.html">Security of the Web</a></li>
+          <li><a href="mobilefirst.html">Mobile-First Design</a></li>
+          <li><a href="statistics.html">Statistics</a></li>
+          <li><a href="ar/arabic-article.html">Machine Learning (Ar)</a></li>
+        </ul>
+      </li>
+
+      <li><a href="cv.html">My CV</a></li>
+            <li><a href="cvMaker/cvMaker.html">CV Maker</a></li>
+
+      <li><a href="schedule/schedule.html">My Schedule</a></li>
+      <li><a href="events.html">JS Events</a></li>
+                <li><a href="games/tictactoe.html">Tic Tac Toe</a></li>
+
+      <li><a href="related.html">Related Topics</a></li>
+    </ul>
+  </nav>
+</header>
+  <a href="../home.html" class="welcome-btn">Home</a>
+
+
+  
+    <h1>JavaScript Event Explorer</h1>
+
+  <main>
+    <div class="filter-section">
+      <input type="text" id="search" placeholder="Search by event name..." />
+      <select id="category">
+        <option value="">All Categories</option>
+      </select>
+    </div>
+
+<p id="searchSummary" class="summary-text"></p>
+
+    <section class="table-area">
+      <table id="eventsTable">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Supported Tags</th>
+            <th>Docs</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+ <footer>
+      <p><strong>DISCLAIMER:</strong> The content of this website is provided solely for educational purposes within the GIN446 web programming course.</p>
+    <p>Last updated: November 23, 2025</p>
+    <p>References and AI-use disclosure available on the <a href="references.html">References</a> page.</p>
+</footer>
+
+  <script src="js/events.js"></script>
+</body>
+</html>

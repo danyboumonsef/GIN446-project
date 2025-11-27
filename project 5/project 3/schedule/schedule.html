@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Schedule</title>
+  <link rel="stylesheet" href="schedule.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul class="menu">
+      <li><a href="../home.html">Home</a></li>
+      
+      <li class="dropdown">
+        <a href="#">Articles</a>
+        <ul class="dropdown-content">
+          <li><a href="../hist.html">History of the Web</a></li>
+          <li><a href="../websecurity.html">Security of the Web</a></li>
+          <li><a href="../mobilefirst.html">Mobile-First Design</a></li>
+          <li><a href="../statistics.html">Statistics</a></li>
+          <li><a href="../ar/arabic-article.html">Machine Learning (Ar)</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../cv.html">My CV</a></li>
+      <li><a href="../cvMaker/cvMaker.html">CV Maker</a></li>
+
+      <li><a href="schedule.html">My Schedule</a></li>
+      <li><a href="../events.html">JS Events</a></li>
+      <li><a href="../related.html">Related Topics</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <a href="../home.html" class="welcome-btn">Home</a>
+
+
+  <h1>My Weekly Schedule</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>11:00 - 12:00</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+
+      <tr>
+        <td>12:30 - 13:45</td>
+        <td><a href="#electronics" class="course electronics">Electronics</a></td>
+        <td><a href="#numerical" class="course numerical">Numerical Analysis</a></td>
+        <td></td>
+        <td><a href="#numerical" class="course numerical">Numerical Analysis</a></td>
+        <td><a href="#electronics" class="course electronics">Electronics</a></td>
+      </tr>
+
+      <tr>
+        <td>14:00 - 15:15</td>
+        <td><a href="#history" class="course history">History</a></td>
+        <td></td><td></td><td></td>
+        <td><a href="#history" class="course history">History</a></td>
+      </tr>
+
+      <tr>
+        <td>15:30 - 16:45</td>
+        <td><a href="#web" class="course web">Web Programming</a></td>
+        <td><a href="#algorithmics" class="course algorithmics">Algorithmics</a></td>
+        <td></td>
+        <td><a href="#algorithmics" class="course algorithmics">Algorithmics</a></td>
+        <td><a href="#web" class="course web">Web Programming</a></td>
+      </tr>
+
+      <tr>
+        <td>17:30 - 19:15</td>
+        <td></td>
+        <td><a href="#lab" class="course lab">Electronics Lab</a></td>
+        <td></td><td></td><td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ===== MODALS ===== -->
+  <div id="electronics" class="modal">
+    <div class="modal-content">
+      <a href="#close" class="close">&times;</a>
+      <h2>Electronics</h2>
+      <p><strong>Time:</strong> 12:30 - 13:45</p>
+      <p><strong>Instructor:</strong> Dr. Chafic Saide</p>
+      <p><strong>Room:</strong> H006</p>
+      <p><strong>Prerequisites:</strong> Electric Circuits</p>
+      <p><strong>Description:</strong> Course Description
+Extended description of the subject matter of the course. Also include any technical characteristics of the
+course such as if it is required or an elective, or any requirements for enrollment.
+This course introduces the physics of semiconductors to clearly explain the main electronic components: the PN
+junction diode, the Zener diode, their equivalent electrical models, and their applications. This is done for DC
+and AC circuits.
+<a href="syllabus/electronics.pdf" class="download-btn" download>Download Syllabus</a>
+    </div>
+  </div>
+
+  <div id="numerical" class="modal">
+    <div class="modal-content">
+      <a href="#close" class="close">&times;</a>
+      <h2>Numerical Analysis</h2>
+      <p><strong>Time:</strong> 12:30 - 13:45</p>
+      <p><strong>Instructor:</strong> Dr. Stephanie Chahine</p>
+      <p><strong>Room:</strong> H108</p>
+      <p><strong>Prerequisites:</strong> MAT227,MAT307, GIN231</p>
+      <p><strong>Description:</strong> Extended description of the subject matter of the course. Also include any technical characteristics of the
+course such as if it is required or an elective, or any requirements for enrollment.</p>
+      <a href="syllabus/numerical.pdf" class="download-btn" download>Download Syllabus</a>
+    </div>
+  </div>
+
+  <div id="algorithmics" class="modal">
+    <div class="modal-content">
+      <a href="#close" class="close">&times;</a>
+      <h2>Algorithmics</h2>
+      <p><strong>Time:</strong> 15:30 - 16:45</p>
+      <p><strong>Instructor:</strong> Dr. Joseph Zalaket</p>
+      <p><strong>Room:</strong> H107</p>
+      <p><strong>Prerequisites:</strong> Data Structures</p>
+      <p><strong>Description:</strong> Asymptotic notation, time and space complexities; Solving recurrences;
+Trees: traversing methods, balanced trees (AVL and red-black trees), heaps; Advanced sorting algorithms,
+methods of linear sort; Hashing : open and closed hashing ; Graphs: traversal in depth-first and breadth-first,
+finding of spanning trees and shortest paths; Huffman coding.</p>
+      <a href="syllabus/algorithmics.pdf" class="download-btn" download>Download Syllabus</a>
+    </div>
+  </div>
+
+  <div id="web" class="modal">
+    <div class="modal-content">
+      <a href="#close" class="close">&times;</a>
+      <h2>Web Programming</h2>
+      <p><strong>Time:</strong> 15:30 - 16:45</p>
+      <p><strong>Instructor:</strong> Dr. Pascale Damien</p>
+      <p><strong>Room:</strong> H107</p>
+      <p><strong>Prerequisites:</strong> GIN300 & GIN371</p>
+      <p><strong>Description:</strong> The "Web Programming" course is a core requirement for Computer Engineering students and serves as a
+major elective for those majoring in Electrical, Telecommunications, or Biomedical Engineering. This course is
+designed to provide students with a comprehensive understanding of both client-side and server-side web
+programming, encompassing a wide range of essential technologies and skills.
+Throughout the course, students will delve into fundamental topics such as HTML, CSS, JavaScript, DOM
+(Document Object Model), PHP, and MySQL. These technologies form the building blocks of modern web
+development, enabling students to create interactive and dynamic web applications. Additionally, students
+will gain proficiency in XML and DTD (Document Type Definition) for structured data representation and
+exchange, further enhancing their web programming capabilities.
+</p>
+      <a href="syllabus/web.pdf" class="download-btn" download>Download Syllabus</a>
+    </div>
+  </div>
+
+  <div id="history" class="modal">
+    <div class="modal-content">
+<a href="#close" class="close">&times;</a>
+      <h2>History</h2>
+      <p><strong>Time:</strong> 14:00 - 15:15</p>
+      <p><strong>Instructor:</strong> Dr. Elias Helou</p>
+      <p><strong>Room:</strong> E308</p>
+      <p><strong>Prerequisites:</strong> None</p>
+      <p><strong>Description:</strong> The role of education in shaping Lebanon's history</p>
+<span class="download-btn disabled">No syllabus available</span>
+    </div>
+  </div>
+
+  <div id="lab" class="modal">
+    <div class="modal-content">
+      <a href="#close" class="close">&times;</a>
+      <h2>Electronics Lab</h2>
+      <p><strong>Time:</strong> 17:30 - 19:15</p>
+      <p><strong>Instructor:</strong> Dr. Roy Samia</p>
+      <p><strong>Room:</strong> Lab H106</p>
+      <p><strong>Prerequisites:</strong> Electronics</p>
+      <p><strong>Description:</strong> Practical experiments on circuits, diodes, and transistor amplifiers.</p>
+<span class="download-btn disabled">No syllabus available</span>
+    </div>
+  </div>
+
+<footer>
+    <p>Last updated: November 11, 2025</p>
+    <p>References and AI-use disclosure available on the <a href="../references.html">References</a> page.</p>
+</footer>
+
+
+
+  <a id="close"></a>
+
+</body>
+</html>

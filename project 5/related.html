@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Related topics</title>
+        <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="hist.html">History</a></li>
+      <li><a href="websecurity.html">Security</a></li>
+      <li><a href="mobilefirst.html">Mobile-First</a></li>
+      <li><a href="statistics.html">Stats</a></li>
+            <li><a href="ar/arabic-article.html">Machine Learning (Ar)</a></li>
+
+      <li><a href="related.html">Related Topics</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <h1>Related Topics</h1>
+    <main>
+  
+
+    <section class="collapsible">
+      <input type="checkbox" id="css-history" class="collapsible-input" />
+      <label for="css-history" class="collapsible-label">
+        <h2>🎨 History of CSS</h2>
+      </label>
+      <div class="collapsible-content">
+ <p>
+          CSS was created by Håkon Wium Lie and Bert Bos in 1994. It is a fundamental language in web development used to style
+          and make web content lively by allowing users to choose layout, fonts, and colors. It first came into effect in 1996 with CSS1, which
+          introduced basic features for text styling, font properties, margins, padding, color and background styling, and
+          the box model. Then came CSS2 in 1998, which added more sophisticated selectors and properties to enhance styling
+          options. Later in 2011, CSS2.1 came in to solve inconsistencies in CSS2. Finally, CSS3 took over, enabling more advanced
+          styling, animations, and responsive designs essential for modern websites.
+          <sup><a href="references.html#r3">[3]</a></sup>
+        </p>      </div>
+    </section>
+
+
+
+<section class="collapsible">
+    <input type="checkbox" id="css-rules" class="collapsible-input" />
+    <label for="css-rules" class="collapsible-label">
+        <h2>🧾 CSS Rules</h2>
+    </label>
+    <div class="collapsible-content">
+        <h3>Basic Syntax Rules:</h3>
+        <p>In CSS, a rule consists of a <strong>selector</strong> that targets HTML elements, and a <strong>declaration block</strong> containing properties and values. Example:</p>
+      
+        <pre><code>p {
+    color: blue;
+    font-size: 16px;
+}
+</code></pre>
+<a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_syntax1" target="_blank">
+  Try it yourself
+</a>
+
+<Hr></Hr>
+
+
+<h3>At-Rules (@):</h3>
+        <p>At-rules are special CSS statements that start with @ and control CSS behavior.</p>
+        <p>Some examples: <sup><a href="references.html#r17">[17]</a></sup></p>
+        <ul>
+            <li><strong>@import</strong>: Allows you to import a style sheet into another style sheet.</li>
+            <li><strong>@keyframes</strong>: Controls the steps in an animation by defining styles for points along the animation sequence</li>
+            <li><strong>@font-face</strong>: Specifies a custom font with which to display text</li>        
+            <li><strong>@media</strong>: Applies parts of a style sheet based on the result of one or more media queries</li>
+            <li><strong>@page</strong>: Customizes the dimension, orientation, and margins of printed pages</li>
+        </ul>
+
+<hr>
+      <h3>Comments: </h3>
+      <p>Used to add notes inside CSS, ignored by browsers:</p>
+      <pre><code>/* This is a comment */</code></pre>
+      <pre><code>
+/* This is 
+a multi-line 
+comment*/ </code></pre>
+
+<hr>
+
+<h3>Selectors: </h3>
+<p>Selectors define which HTML elements the CSS rules apply to: <sup><a href="references.html#r18">[18]</a></sup></p>
+<ul>
+  <li><strong>Type Selector</strong>: ex: <code>p</code></li>
+  <li><strong>Class Selector</strong>: ex: <code>.classname</code></li>
+  <li><strong>ID Selector</strong>: ex: <code>#idname</code></li>
+  <li><strong>Pseudo-class Selector</strong>: ex: <code>a:hover</code></li>
+  <li><strong>Pseudo-element Selector</strong>: ex: <code>p::first-letter</code></li>
+</ul>
+
+<hr>
+
+
+<h3>!important Declarations:</h3>
+<p>Overrides normal cascading rules:</p>
+<pre><code>p {
+    color: blue !important;
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+    <section class="collapsible">
+      <input type="checkbox" id="css-transform" class="collapsible-input" />
+      <label for="css-transform" class="collapsible-label">
+        <h2>🌀 CSS 2D and 3D Transforms</h2>
+      </label>
+      <div class="collapsible-content">
+        <p>One of the most exciting features of CSS are 2D and 3D transforms which let you move, rotate, scale, and skew elements. 2D Transforms work on the X and Y axe and 3D Transforms add depth using the Z axis.These effects create dynamic and visually engaging interfaces without needing complex animations.</p>
+        <p>To use them, you must use the transform property which has functions like translate()/translate3d(), rotate()/rotate3d(), scale()/scale3d(), taking the dimensions as parameters</p>
+      
+            <h3>2D Transforms Example: <sup><a href="references.html#r19">[19]</a></sup></h3>
+<div class="box">
+</div>
+<div class="box">
+</div>
+<div class="ebox">
+</div>
+<div class="box">
+</div>
+<div class="box">
+</div>
+
+
+      </div>
+
+
+    </section>
+<section class="collapsible">
+      <input type="checkbox" id="css-responsive" class="collapsible-input" />
+      <label for="css-responsive" class="collapsible-label">
+        <h2>📱 CSS and Device Adaptation</h2>
+      </label>
+      <div class="collapsible-content">
+        <p>Modern CSS adapts automatically to different devices through several key features. Responsive design allows web pages to resize and rearrange elements based on screen width, making them readable and usable on desktops, tablets, and phones without extra code.</p>
+        <p>Some of these features include: </p>
+        <ul>
+          <li><strong>Media Queries:</strong><p> Apply styles based on screen characteristics. Example:
+            <pre><code>@media (max-width: 600px) </code></pre>
+            <pre><code>@media (orientation: landscape)</code></pre>
+            </p>
+          </li>
+          <li><strong>Flexible Layouts:</strong><p> Organizes content in flexible rows or columns. Example:
+            <pre><code>display: flex;</code></pre>
+            <pre><code>display: grid;</code></pre>
+            </p>
+          </li>
+          <li><strong>Fluid Images:</strong> <p>Scale images according to their container. Example:
+            <pre><code> max-width: 100%; height: auto;</code></pre>
+          </p></li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section class="collapsible">
+     <input type="checkbox" id="js-history" class="collapsible-input" />
+      <label for="js-history" class="collapsible-label">
+        <h2>⚙️ JavaScript History</h2>
+      </label>
+     <div class="collapsible-content">
+ <ul>
+  <li>1995 - Brendan Eich creates JavaScript at Netscape.</li>
+  <li>1996 - Microsoft introduces JScript for Internet Explorer.</li>
+  <li>1997 - JavaScript is submitted to ECMA, creating ECMAScript.</li>
+  <li>1999 - ECMAScript 3 is released, adding regex and improved features.</li>
+  <li>2009 - ECMAScript 5 is released, adding strict mode and JSON support.</li>
+  <li>2015 - ECMAScript 6 (ES6) is released with classes, modules, and arrow functions.</li>
+  <li>2020 - ECMAScript 2020 adds BigInt, globalThis, and other modern features.</li>
+  <li>2023 - ECMAScript 2023 adds Array.prototype.at, Object.hasOwn, and more.<sup><a href="references.html#r20">[20]</a></sup>    
+</li>
+</ul>
+
+
+
+
+    <p>JavaScript is the programming language implemented in browsers like Chrome and Firefox and is widely used in web development. JScript is Microsoft’s implementation of JavaScript for Internet Explorer, with slight differences in syntax and behavior. ECMAScript is the official standard set by ECMA International that defines how JavaScript should behave, and both JavaScript and JScript are implementations of ECMAScript.
+      In 2025, javascript is 30 years old and is still evolving with new features and capabilities to meet modern web development needs.
+    </p>
+  </div>
+    </section> 
+
+ <section class="collapsible">
+      <input type="checkbox" id="js-increment" class="collapsible-input" />
+      <label for="js-increment" class="collapsible-label">
+        <h3>➕ Pre vs Post Incrementation in JavaScript</h3>
+      </label>
+      <div class="collapsible-content">
+        <p>JavaScript supports both pre and post incrementation. 
+          The difference lies in when the variable is incremented, wheter before or after it is used.  
+        <br>Example:<br>
+        <code>let x = 5;<br>console.log(++x); // 6<br>console.log(x++); // 6, then x becomes 7</code></p>
+      </div>
+    </section>
+
+    <section class="collapsible">
+      <input type="checkbox" id="regEx" class="collapsible-input" />
+      <label for="regEx" class="collapsible-label">
+        <h3>#️⃣ Regular Expressions in JavaScript and Python</h3>
+      </label>
+      <div class="collapsible-content">
+       <p>A regular expression (regex) is a sequence of characters that defines a search pattern, usually for finding, matching, or validating parts of text. Regex is used whenever you want to check if a string fits a specific format or to extract particular pieces of information.</p>
+ <p>Python generally has more advanced pattern capabilities, while JavaScript syntax is more integrated into the language.Python generally has more advanced pattern capabilities, while JavaScript syntax is more integrated into the language.</p> 
+<table border="1">
+  <tr>
+    <th>Feature</th>
+    <th>JavaScript</th>
+    <th>Python</th>
+  </tr>
+  <tr>
+    <td>Regex declaration</td>
+    <td>/pattern/flags or RegExp</td>
+    <td>re.compile(r'pattern')</td>
+  </tr>
+  <tr>
+    <td>Multiline flag</td>
+    <td>/m</td>
+    <td>re.MULTILINE</td>
+  </tr>
+  <tr>
+    <td>Unicode support</td>
+    <td>/u flag (modern)</td>
+    <td>Native</td>
+  </tr>
+  <tr>
+    <td>Lookbehind</td>
+    <td>Modern only</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Named groups</td>
+    <td>Modern only</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Match at string start</td>
+    <td>^ in pattern</td>
+    <td>re.match() function</td>
+  </tr>
+</table></div>
+    </section>
+
+
+
+ <section class="collapsible">
+      <input type="checkbox" id="local Storage" class="collapsible-input" />
+      <label for="local Storage" class="collapsible-label">
+        <h2>💾 Local Storage </h2>
+      </label>
+      <div class="collapsible-content">
+ <p>
+    Local storage is a feature built into web browsers that lets websites save data
+    inside the user's browser. The saved data stays even if the browser is closed
+    or the page is refreshed. It is mainly used to remember things like user
+    preferences, app settings, or small pieces of data.
+  </p>
+
+  <p>
+    It is different from a <strong>database</strong> because a database stores data
+    on a server and can be shared between many users, while local storage is saved
+    only on the user's own device. It is also different from <strong>cookies</strong>
+    because cookies are sent to the server with every request, but local storage
+    data stays only in the browser.
+  </p>
+
+  <h3>Using Local Storage in JavaScript</h3>
+  <P>
+localStorage.setItem("username", "Dany");<br>
+let name = localStorage.getItem("username");<br>
+localStorage.removeItem("username");<br>
+<P>
+
+  <h3>Common Uses</h3>
+  <ul>
+    <li>Saving theme (dark or light mode)</li>
+    <li>Saving language choice</li>
+    <li>Storing usernames or display names</li>
+    <li>Saving small user settings and preferences</li>
+  </ul>
+
+</div>
+ </section>
+
+  </main>
+
+<footer>
+      <p><strong>DISCLAIMER:</strong> The content of this website is provided solely for educational purposes within the GIN446 web programming course.</p>
+    <p>Last updated: November 23, 2025</p>
+    <p>References and AI-use disclosure available on the <a href="references.html">References</a> page.</p>
+</footer>
+</body>
+</body>
+</html>
