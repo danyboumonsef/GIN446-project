@@ -1,58 +1,47 @@
-# 📦 Lost & Found Hub
+📦 Lost & Found Hub
 
-A full-stack Lost & Found web application built using **HTML, CSS, JavaScript, PHP, MySQL, XML, and JSON**.  
-Users can post lost/found items, browse all items, and contact the poster.  
-Admins have additional control to delete posts.
+A full-stack Lost & Found web application built using
+HTML, CSS, JavaScript, PHP, MySQL, XML, and JSON.
 
----
+Users can post items, browse all items, and contact owners.
+Admins have full control to delete any post.
 
-## 🚀 Features
+🚀 Features
+User Features
 
-### User Features
-- Sign up / Login / Logout  
-- Post lost or found items (+ photo upload)  
-- Search, filter, and sort items  
-- View item details in a modal  
-- Contact item owner
+Sign up / Login / Logout
 
-### Admin Features
-- Admins see a **Delete** button on every post  
-- Admins can delete any item  
-- Owners can delete their own posts  
-- Role stored safely in the database
+Post lost or found items (with photo upload)
 
----
+Browse all posts with search & filters
 
-## 🏗 How It Works
+View item details in a modal
 
-### Viewing Items
+Contact the item owner
 
+Delete their own posts
 
+Admin Features
+
+Delete any post
+
+Admin role stored securely in the database
+
+Admins automatically see “Delete” on all items
+
+🏗 How the System Works
+Viewing Items Flow
 MySQL → get_items.php → XML → JavaScript → Homepage
 
-
-
-### Performing Actions (Delete / Add)
-
-
+Performing Actions (Add / Delete)
 JavaScript → JSON → PHP → MySQL
 
-
-
-### Authentication
-
-
+Authentication
 login.php → PHP Sessions
 
-
-
----
-
-## 🗂 File Structure (Simple)
-
-
-
+🗂 File Structure (Clean GitHub-Friendly Version)
 lostfound/
+│
 ├── home.html
 ├── login.php
 ├── signup.php
@@ -62,39 +51,50 @@ lostfound/
 ├── db.php
 │
 └── assets/
-├── style.css
-└── script.js
-└── profile.js
-`
+    ├── style.css
+    ├── script.js
+    └── profile.js
 
----
+🗄 Database Structure
+users
 
-## 🗄 Database
+id
 
-### users
-- id  
-- name  
-- email  
-- password  
-- phone  
-- role (`user` or `admin`)
+name
 
-### items
-- id  
-- item_name  
-- description  
-- category  
-- status (Lost/Found)  
-- location  
-- date  
-- photo  
-- user_id  
-- returned  
+email
 
-Admins are created manually in phpMyAdmin:
+password
 
----
+phone
 
-## ✔ Status
+role (user or admin)
 
-Fully functional: supports multiple admins, XML-based loading, JSON-based actions, and secure role handling.
+items
+
+id
+
+item_name
+
+description
+
+category
+
+status (Lost / Found)
+
+location
+
+date
+
+photo
+
+user_id
+
+returned
+
+Admin accounts are created manually in phpMyAdmin.
+
+✔ Project Status
+
+Fully functional:
+Supports multiple admins, XML loading for items, JSON-based actions, and secure role handling.
