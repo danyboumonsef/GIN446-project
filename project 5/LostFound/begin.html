@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lost & Found Hub</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="wlc">
+
+<div class="welcome-wrapper">
+
+    <!-- LEFT IMAGE SIDE -->
+    <div class="welcome-image">
+        <img src="assets/login.png" alt="Welcome Image">
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="welcome-content">
+
+        <h1 class="welcome-title">Welcome to<br>Lost & Found Hub</h1>
+
+        <div class="welcome-links">
+            <a href="signup.html" class="welcome-link">Sign Up</a>
+            <span class="divider-line">|</span>
+            <a href="login.html" class="welcome-link">Log In</a>
+        </div>
+
+        <button id="googleBtn" class="google-btn">
+            <img src="assets/google.png" alt="">
+            Sign in with Google
+        </button>
+
+    </div>
+
+</div>
+
+
+
+
+<!--   FIREBASE SCRIPT  -->
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyDtypcBsnq6zXoV742ZjGxRJksNgo-ioFA",
+        authDomain: "lostfound-606ff.firebaseapp.com",
+        projectId: "lostfound-606ff",
+        storageBucket: "lostfound-606ff.firebasestorage.app",
+        messagingSenderId: "1047976713720",
+        appId: "1:1047976713720:web:912cafe2fa6cf0995dca0d"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+
+    document.getElementById("googleBtn").onclick = async () => {
+        try {
+            const result = await signInWithPopup(auth, provider);
+            const user = result.user;
+
+            const response = await fetch("login.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    firebase_uid: user.uid,
+                    name: user.displayName,
+                    email: user.email
+                })
+            });
+
+            const text = await response.text();
+            if (text === "OK") {
+                window.location.href = "home.html";
+            } else {
+                alert("Login failed: " + text);
+            }
+        } catch (err) {
+            alert("Firebase login error: " + err.message);
+        }
+    };
+</script>
+
+</body>
+</html>

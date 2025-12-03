@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+     <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="signup-body">
+
+<div class="auth-container">
+    <h2 class="auth-title">Sign Up</h2>
+    <p class="auth-subtitle">Create an account to get started</p>
+
+    <p id="error-message" class="auth-error"></p>
+
+
+
+<form method="POST" action="signup.php" class="auth-form">
+    <label>Username:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required
+           pattern="^[^@\s]+@[^@\s]+\..+$"
+                       title="example: user@mail.xyz"><br><br>
+
+    
+	<label>Phone Number:</label><br>
+	<input type="text" name="phone" required
+       pattern="(\d{8}|\+961\d{8})"
+       title="Phone number must be 8 digits or +961 followed by 8 digits."><br><br>
+
+   <label>Password:</label><br>
+    <div class="password-box">
+        <input type="password" name="password" id="passwordField" required>
+        <button type="button" id="toggleBtn">Show</button>
+    </div>
+    <br><br>
+
+    <button type="submit" class="auth-btn">Sign Up</button>
+</form>
+
+
+<a href="begin.html" class="back-btn">Go Back</a>
+<script>
+const passwordField = document.getElementById("passwordField");
+const toggleBtn = document.getElementById("toggleBtn");
+
+toggleBtn.addEventListener("click", function() {
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        toggleBtn.textContent = "Hide";
+    } else {
+        passwordField.type = "password";
+        toggleBtn.textContent = "Show";
+    }
+});
+    
+
+const params = new URLSearchParams(window.location.search);
+const error = params.get('error');
+if (error) {
+    document.getElementById('error-message').textContent = error;
+}
+
+</script>
+</body>
+</html>
+

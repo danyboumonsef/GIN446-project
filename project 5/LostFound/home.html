@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+<header class="main-header">
+    <h1>Lost & Found</h1>
+
+    <div class="header-buttons">
+        <a href="add_item.php" class="add-btn">Add Item</a>
+                <a href="profile.php" class="profile-btn">My Profile</a>
+        <a href="logout.php" class="logout-btn">Logout</a>
+    </div>
+</header>
+<div class="controls">
+    <input type="text" id="searchBox" placeholder="Search items...">
+
+    <select id="statusFilter">
+        <option value="">All Statuses</option>
+        <option value="found/not-returned">Found / Not Returned</option>
+        <option value="lost/not-returned">Lost / Not Returned</option>
+        <option value="found/returned">Found / Returned</option>
+        <option value="lost/returned">Lost / Returned</option>
+    </select>
+
+    <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option value="Phone">Phone</option>
+        <option value="Wallet">Wallet</option>
+        <option value="Keys">Keys</option>
+        <option value="Bag">Bag</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Other">Other</option>
+    </select>
+
+    <select id="sortByDate">
+        <option value="">Sort by Date</option>
+        <option value="newest">Newest First</option>
+        <option value="oldest">Oldest First</option>
+    </select>
+</div>
+
+
+<div id="items-container" class="items-grid"></div>
+
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get("submitted") === "1") {
+    alert("Item submitted successfully!");
+    window.history.replaceState({}, document.title, "home.html");
+}
+</script>
+
+<script src="assets/script.js"></script>
+
+</body>
+</html>
