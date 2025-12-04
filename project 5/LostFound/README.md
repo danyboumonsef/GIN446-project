@@ -51,7 +51,7 @@ login.php → PHP Sessions
 ## 🗂 File Structure (Simple)
 
 
-
+```
 lostfound/
 ├── home.html
 ├── login.php
@@ -65,7 +65,7 @@ lostfound/
 ├── style.css
 └── script.js
 └── profile.js
-`
+```
 
 ---
 
