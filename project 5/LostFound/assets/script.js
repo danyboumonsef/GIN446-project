@@ -1,21 +1,21 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const container = document.getElementById("items-container");
+document.addEventListener("DOMContentLoaded", function () {   //This waits until the HTML page fully loads to prevent errors
+    const container = document.getElementById("items-container"); //create references to HTML elements for later use
     const searchBox = document.getElementById("searchBox");
     const statusFilter = document.getElementById("statusFilter");
     const categoryFilter = document.getElementById("categoryFilter");
     const sortByDate = document.getElementById("sortByDate");
 
     let itemsData = [];
-    let isAdmin = false;
+    let isAdmin = false;  //will be true if the backend says the user is admin after fetching 
 
     // ---------------- FETCH XML ITEMS ----------------
-    fetch("get_items.php")
+    fetch("get_items.php") //fetch the XML data from the PHP file
         .then(res => res.text())
         .then(str => {
             const parser = new DOMParser();
             const xml = parser.parseFromString(str, "text/xml");
 
-            isAdmin = xml.getElementsByTagName("isAdmin")[0]?.textContent === "1";
+            isAdmin = xml.getElementsByTagName("isAdmin")[0]?.textContent === "1";   //check if admin
             const items = xml.getElementsByTagName("item");
 
             itemsData = [];
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const btn = card.querySelector(".delete-btn");
                 if (btn) {
                     btn.addEventListener("click", function (e) {
-                        e.stopPropagation();
+                        e.stopPropagation();   // to prevent modal opening
                         deleteItem(item.id);
                     });
                 }
